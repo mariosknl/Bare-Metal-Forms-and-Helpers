@@ -243,3 +243,463 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3906)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-05 18:04:06 +0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 406)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 2340)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:04:13 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 14103)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:18:38 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 6098)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 7254)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:19:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1142)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2295)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+-->
+
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<%= form_tag '/users' accept-charset="UTF-8" %>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username' placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    -->
+16:    
+17:    <h1>User#new</h1>
+18:    <p>Find me in app/views/user/new.html.erb</p>
+19:    
+20:    <%= form_tag '/users' accept-charset="UTF-8" %>
+21:      <%= label_tag 'username' %>
+22:      <%= text_field_tag 'username' placeholder: 'similar to David' %><br /><br />
+23:      <%= label_tag 'email' %>
+24:      <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+25:      <%= label_tag 'password' %>
+26:      <%= password_field_tag 'password' %><br /><br />
+27:      <%= submit_tag 'Create' %>
+  
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:20: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:19:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1136)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2301)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+-->
+
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username' placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    -->
+16:    
+17:    <h1>User#new</h1>
+18:    <p>Find me in app/views/user/new.html.erb</p>
+19:    
+20:    <%= form_tag '/users'%>
+21:      <%= label_tag 'username' %>
+22:      <%= text_field_tag 'username' placeholder: 'similar to David' %><br /><br />
+23:      <%= label_tag 'email' %>
+24:      <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+25:      <%= label_tag 'password' %>
+26:      <%= password_field_tag 'password' %><br /><br />
+27:      <%= submit_tag 'Create' %>
+  
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:22: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:20:02 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1137)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2290)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+-->
+
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    -->
+16:    
+17:    <h1>User#new</h1>
+18:    <p>Find me in app/views/user/new.html.erb</p>
+19:    
+20:    <%= form_tag '/users'%>
+21:      <%= label_tag 'username' %>
+22:      <%= text_field_tag 'username', placeholder: 'similar to David' %><br /><br />
+23:      <%= label_tag 'email' %>
+24:      <%= text_field_tag 'email' placeholder: 'example@example.com' %><br /><br />
+25:      <%= label_tag 'password' %>
+26:      <%= password_field_tag 'password' %><br /><br />
+27:      <%= submit_tag 'Create' %>
+  
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:20:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 5028)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:20:51 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3822)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:20:52 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:20:54 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3824)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:21:24 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4949)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:21:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 573)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 4953)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:22:07 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4952)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:22:08 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3840)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:22:10 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:22:21 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3785)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:22:40 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4948)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:22:56 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4964)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:02 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3810)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:17 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 4960)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:19 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3806)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3808)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-05 18:23:24 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.9ms | Allocations: 178)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 871)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3823)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:50 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4951)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-05-05 18:23:52 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3808)
+
+
+Started GET "/" for ::1 at 2020-05-05 18:24:09 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kubilay/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.0ms | Allocations: 183)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 770)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:24:11 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 353)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3728)
+
+
+Started POST "/users" for ::1 at 2020-05-05 18:24:52 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"BJVpQNv1RprZhipnvGK2Z8kmoJkwm4WlQI23yBGuTgciw/lb2N+q6UhWPO9zcLvOPQcYum6Up8U9nN6+KjoTag==", "username"=>"Kubilay", "email"=>"kblycaglayan@gmail.com", "password"=>"[FILTERED]", "commit"=>"Create"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 1048)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:18:in `user_params'
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/users" for ::1 at 2020-05-05 18:25:27 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"BJVpQNv1RprZhipnvGK2Z8kmoJkwm4WlQI23yBGuTgciw/lb2N+q6UhWPO9zcLvOPQcYum6Up8U9nN6+KjoTag==", "username"=>"Kubilay", "email"=>"kblycaglayan@gmail.com", "password"=>"[FILTERED]", "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kubilay"], ["email", "kblycaglayan@gmail.com"], ["password", "asdasd"], ["created_at", "2020-05-05 15:25:27.549054"], ["updated_at", "2020-05-05 15:25:27.549054"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 27ms (ActiveRecord: 6.9ms | Allocations: 7481)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:25:27 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3974)
+
+
