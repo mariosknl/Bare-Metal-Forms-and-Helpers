@@ -703,3 +703,162 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3974)
 
 
+Started GET "/users/new" for ::1 at 2020-05-05 18:35:27 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1239)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5527)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+-->
+
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+  <%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'example@sm.com' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <%= end %>
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    
+16:    <%= form_tag '/users'%>
+17:      <%= label_tag 'username' %>
+18:      <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+19:      <%= label_tag 'email' %>
+20:      <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+21:      <%= label_tag 'password' %>
+22:      <%= password_field_tag 'password' %><br /><br />
+23:      <%= submit_tag 'Create' %>
+24:    -->
+25:    
+26:    <h1>User#new</h1>
+27:    <p>Find me in app/views/user/new.html.erb</p>
+28:    
+29:      <%= form_for @user do |f| %>
+30:      <%= f.label :username %>
+31:      <%= f.text_field :username, placeholder: 'similar to David' %><br /><br />
+32:      <%= f.label :email %>
+33:      <%= f.text_field :email, placeholder: 'example@sm.com' %><br /><br />
+34:      <%= f.label :password %>
+35:      <%= f.password_field :password %><br /><br />
+36:      <%= f.submit :Create %>
+37:      <%= end %>
+  
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/users/new.html.erb:37: syntax error, unexpected `end'
+app/views/users/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+Started GET "/users/new" for ::1 at 2020-05-05 18:35:48 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 9179)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:35:49 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 4590)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:35:51 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4592)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:36:44 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 5885)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:38:01 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 38.4ms | ActiveRecord: 0.4ms | Allocations: 8445)
+
+
+Started POST "/users" for ::1 at 2020-05-05 18:38:08 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"XDjeXUA/U7pz1rrE/tkjPYMH+p9K7bx8StxKBcav0vF6bk5GQxW/yeIGrEwxyy6UdyZCvBTinhw3zSNz/TuPnA==", "user"=>{"username"=>"asdasd", "email"=>"kblycaglayan@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "asdasd"], ["email", "kblycaglayan@gmail.com"], ["password", "asdasd"], ["created_at", "2020-05-05 15:38:08.939109"], ["updated_at", "2020-05-05 15:38:08.939109"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 31ms (ActiveRecord: 6.9ms | Allocations: 3587)
+
+
+Started GET "/users/new" for ::1 at 2020-05-05 18:38:08 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 4583)
+
+

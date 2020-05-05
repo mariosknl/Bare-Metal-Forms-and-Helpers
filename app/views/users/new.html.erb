@@ -12,10 +12,6 @@
   <input type="password" name="user[password]"><br /><br />
   <input type="submit">
 </form>
--->
-
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
 
 <%= form_tag '/users'%>
   <%= label_tag 'username' %>
@@ -25,3 +21,17 @@
   <%= label_tag 'password' %>
   <%= password_field_tag 'password' %><br /><br />
   <%= submit_tag 'Create' %>
+-->
+
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+  <%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <% end %>
