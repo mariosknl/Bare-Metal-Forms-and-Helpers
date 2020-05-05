@@ -1,2 +1,13 @@
 <h1>User#new</h1>
 <p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
