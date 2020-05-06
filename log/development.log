@@ -862,3 +862,407 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 4583)
 
 
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /Users/marioskanellopoulos/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/" for ::1 at 2020-05-06 10:50:36 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/marioskanellopoulos/.rvm/gems/ruby-2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/marioskanellopoulos/.rvm/gems/ruby-2.7.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.9ms | Allocations: 295)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 1691)
+
+
+Started GET "/users" for ::1 at 2020-05-06 10:50:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/edit" for ::1 at 2020-05-06 10:51:11 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 891)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users" for ::1 at 2020-05-06 10:51:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /Users/marioskanellopoulos/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /Users/marioskanellopoulos/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/users/1/edit" for ::1 at 2020-05-06 10:53:48 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 827)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/1/edit" for ::1 at 2020-05-06 10:55:12 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 91.4ms | Allocations: 63430)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.9ms | Allocations: 69251)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f8d2bcaedc8>:0x00007f8d2bcac938>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: 
+    29:   <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 10:59:25 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms | Allocations: 2348)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"controller"=>"users", "action"=>"edit", "id"=>"1"}):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/1/edit" for ::1 at 2020-05-06 10:59:51 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 79.7ms | Allocations: 62972)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.9ms | Allocations: 67619)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f8d2a93a620>:0x00007f8d2a938668>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: 
+    29:   <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:00:47 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 81.0ms | Allocations: 63363)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.1ms | Allocations: 64969)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f8d2b6b5930>:0x00007f8d2b6ae298>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: <%= @user.username %>
+    29:  <!-- <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:01:07 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 106.8ms | Allocations: 63856)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.7ms | Allocations: 70326)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fce4560ebc0>:0x00007fce4560d298>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: <%= @user.username %>
+    29:  <!-- <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:01:46 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 113.5ms | Allocations: 63856)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.9ms | Allocations: 70274)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fda1dad1f20>:0x00007fda1dad05f8>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: <%= @user.username %>
+    29:  <!-- <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:01:57 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 83.8ms | Allocations: 63373)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.2ms | Allocations: 65024)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fda1c9e7ca0>:0x00007fda1c9e5950>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: <%= @user.username %>
+    29: <!-- <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:02:44 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 114.1ms | Allocations: 63838)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.7ms | Allocations: 70256)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fd040b52cd8>:0x00007fd040b513b0>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: 
+    29: <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:04:09 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 79.4ms | Allocations: 63012)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.6ms | Allocations: 67761)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fd041a3eaf8>:0x00007fd041a3c410>
+Did you mean?  users_path):
+    26: <h1>User#edit</h1>
+    27: <p>Find me in app/views/user/new.html.erb</p>
+    28: 
+    29: <%= form_for @user do |f| %>
+    30:   <%= f.label :username %>
+    31:   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+    32:   <%= f.label :email %>
+  
+app/views/users/edit.html.erb:29
+Started GET "/users/1/edit" for ::1 at 2020-05-06 11:04:36 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 39.5ms | Allocations: 3618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 59.3ms | ActiveRecord: 1.2ms | Allocations: 15416)
+
+
+Started GET "/users/2/edit" for ::1 at 2020-05-06 11:04:51 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1146)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 5509)
+
+
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:04:57 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 5500)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /Users/marioskanellopoulos/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:06:33 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 932)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:06:44 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/marioskanellopoulos/Desktop/Microverse/Ruby_on_Rails/Bare-Metal-Forms-and-Helpers/app/controllers/users_controller.rb:24: syntax error, unexpected symbol literal
+...:username, :password, :email. :id)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:24: syntax error, unexpected symbol literal
+app/controllers/users_controller.rb:24: syntax error, unexpected symbol literal
+app/controllers/users_controller.rb:24: syntax error, unexpected symbol literal
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:06:54 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 939)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:08:20 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms | Allocations: 2294)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/3/edit" for ::1 at 2020-05-06 11:09:14 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 23.1ms | Allocations: 3314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 44.2ms | ActiveRecord: 0.8ms | Allocations: 15214)
+
+
