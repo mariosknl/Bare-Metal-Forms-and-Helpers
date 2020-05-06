@@ -23,10 +23,23 @@
   <%= submit_tag 'Create' %>
 -->
 
-<h1>User#edit</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<h1>Edit User: <%= @user.username %> </h1>
+<p>Find me in app/views/user/edit.html.erb</p>
+
+
 
 <%= form_for @user do |f| %>
+
+<% if @user.errors %>
+<ul>
+<% @user.errors.full_messages.each do |error_message| %>
+<li>
+<%= error_message %>
+</li>
+<% end %>
+<% end %>
+</ul>
+
   <%= f.label :username %>
   <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
   <%= f.label :email %>

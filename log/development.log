@@ -1945,3 +1945,573 @@ Processing by UsersController#update as HTML
 Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.1ms | Allocations: 13380)
 
 
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:42:24 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1309)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms | Allocations: 6837)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+-->
+
+<h1>User#edit</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<% if @user.errors %>
+<ul>
+<% @user.errors.full_messages.each do |error_message| %>
+<li>
+<%= error_message %>
+</li>
+<% end %>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <% end %> 
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    
+16:    <%= form_tag '/users'%>
+17:      <%= label_tag 'username' %>
+18:      <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+19:      <%= label_tag 'email' %>
+20:      <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+21:      <%= label_tag 'password' %>
+22:      <%= password_field_tag 'password' %><br /><br />
+23:      <%= submit_tag 'Create' %>
+24:    -->
+25:    
+26:    <h1>User#edit</h1>
+27:    <p>Find me in app/views/user/new.html.erb</p>
+28:    
+29:    <% if @user.errors %>
+30:    <ul>
+31:    <% @user.errors.full_messages.each do |error_message| %>
+32:    <li>
+33:    <%= error_message %>
+34:    </li>
+35:    <% end %>
+36:    </ul>
+37:    
+38:    <%= form_for @user do |f| %>
+39:      <%= f.label :username %>
+40:      <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+41:      <%= f.label :email %>
+42:      <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+43:      <%= f.label :password %>
+44:      <%= f.password_field :password %><br /><br />
+45:      <%= f.submit :Create %>
+46:      <% end %> 
+  
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:42:33 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1343)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms | Allocations: 3051)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+-->
+
+<h1>User#edit</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<% if @user.errors %>
+<ul>
+<% @user.errors.full_messages.each do |error_message| %>
+<li>
+<%= error_message %>
+</li>
+<%= end %>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <% end %> 
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    
+16:    <%= form_tag '/users'%>
+17:      <%= label_tag 'username' %>
+18:      <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+19:      <%= label_tag 'email' %>
+20:      <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+21:      <%= label_tag 'password' %>
+22:      <%= password_field_tag 'password' %><br /><br />
+23:      <%= submit_tag 'Create' %>
+24:    -->
+25:    
+26:    <h1>User#edit</h1>
+27:    <p>Find me in app/views/user/new.html.erb</p>
+28:    
+29:    <% if @user.errors %>
+30:    <ul>
+31:    <% @user.errors.full_messages.each do |error_message| %>
+32:    <li>
+33:    <%= error_message %>
+34:    </li>
+35:    <%= end %>
+36:    </ul>
+37:    
+38:    <%= form_for @user do |f| %>
+39:      <%= f.label :username %>
+40:      <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+41:      <%= f.label :email %>
+42:      <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+43:      <%= f.label :password %>
+44:      <%= f.password_field :password %><br /><br />
+45:      <%= f.submit :Create %>
+46:      <% end %> 
+  
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:42:36 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1330)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 2301)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+-->
+
+<h1>User#edit</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<% if @user.errors %>
+<ul>
+<% @user.errors.full_messages.each do |error_message| %>
+<li>
+<%= error_message %>
+</li>
+<%= end %>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <% end %> 
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    
+16:    <%= form_tag '/users'%>
+17:      <%= label_tag 'username' %>
+18:      <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+19:      <%= label_tag 'email' %>
+20:      <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+21:      <%= label_tag 'password' %>
+22:      <%= password_field_tag 'password' %><br /><br />
+23:      <%= submit_tag 'Create' %>
+24:    -->
+25:    
+26:    <h1>User#edit</h1>
+27:    <p>Find me in app/views/user/new.html.erb</p>
+28:    
+29:    <% if @user.errors %>
+30:    <ul>
+31:    <% @user.errors.full_messages.each do |error_message| %>
+32:    <li>
+33:    <%= error_message %>
+34:    </li>
+35:    <%= end %>
+36:    </ul>
+37:    
+38:    <%= form_for @user do |f| %>
+39:      <%= f.label :username %>
+40:      <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+41:      <%= f.label :email %>
+42:      <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+43:      <%= f.label :password %>
+44:      <%= f.password_field :password %><br /><br />
+45:      <%= f.submit :Create %>
+46:      <% end %> 
+  
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:48: syntax error, unexpected `end', expecting ')'
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:43:14 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1357)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 3065)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!--
+<h1>User#new</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+  <label for="email">Email: </label>
+  <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+  <label for="password">Password: </label>
+  <input type="password" name="user[password]"><br /><br />
+  <input type="submit">
+</form>
+
+<%= form_tag '/users'%>
+  <%= label_tag 'username' %>
+  <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+  <%= label_tag 'password' %>
+  <%= password_field_tag 'password' %><br /><br />
+  <%= submit_tag 'Create' %>
+-->
+
+<h1>User#edit</h1>
+<p>Find me in app/views/user/new.html.erb</p>
+
+<% if @user.errors %>
+<ul>
+<% @user.errors.full_messages.each do |error_message| %>
+<li>
+<%= error_message %>
+</li>
+<%= end %>
+<%= end %>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br /><br />
+  <%= f.submit :Create %>
+  <% end %> 
+):
+1:    <!--
+2:    <h1>User#new</h1>
+3:    <p>Find me in app/views/user/new.html.erb</p>
+4:    
+5:    <form action="/users" method="post" accept-charset="UTF-8">
+6:      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+7:      <label for="username">Username: </label>
+8:      <input type="text" name="user[username]" placeholder="similar to David"><br /><br />
+9:      <label for="email">Email: </label>
+10:      <input type="text" name="user[email]" placeholder="example@example.com"><br /><br />
+11:      <label for="password">Password: </label>
+12:      <input type="password" name="user[password]"><br /><br />
+13:      <input type="submit">
+14:    </form>
+15:    
+16:    <%= form_tag '/users'%>
+17:      <%= label_tag 'username' %>
+18:      <%= text_field_tag 'username', nil, placeholder: 'similar to David' %><br /><br />
+19:      <%= label_tag 'email' %>
+20:      <%= text_field_tag 'email', nil, placeholder: 'example@sm.com' %><br /><br />
+21:      <%= label_tag 'password' %>
+22:      <%= password_field_tag 'password' %><br /><br />
+23:      <%= submit_tag 'Create' %>
+24:    -->
+25:    
+26:    <h1>User#edit</h1>
+27:    <p>Find me in app/views/user/new.html.erb</p>
+28:    
+29:    <% if @user.errors %>
+30:    <ul>
+31:    <% @user.errors.full_messages.each do |error_message| %>
+32:    <li>
+33:    <%= error_message %>
+34:    </li>
+35:    <%= end %>
+36:    <%= end %>
+37:    </ul>
+38:    
+39:    <%= form_for @user do |f| %>
+40:      <%= f.label :username %>
+41:      <%= f.text_field :username, placeholder: 'Similar to David' %><br /><br />
+42:      <%= f.label :email %>
+43:      <%= f.text_field :email, placeholder: 'Your email here' %><br /><br />
+44:      <%= f.label :password %>
+45:      <%= f.password_field :password %><br /><br />
+46:      <%= f.submit :Create %>
+47:      <% end %> 
+  
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/users/edit.html.erb:35: syntax error, unexpected `end'
+app/views/users/edit.html.erb:36: syntax error, unexpected `end'
+app/views/users/edit.html.erb:49: syntax error, unexpected `end', expecting ')'
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:43:26 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms | Allocations: 13946)
+
+
+Started PATCH "/users/5" for ::1 at 2020-05-06 11:43:34 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"09qCp9OFagIp67Cep9FTo3eFBK0mTMyrEel//hwrgRf/QfZVXDr4LcXm0TMKxL6swKZxkuhN6FzPrNzwSMtzBA==", "user"=>{"username"=>"", "email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Create", "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1305)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 6374)
+
+
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:44:03 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 6550)
+
+
+Started PATCH "/users/5" for ::1 at 2020-05-06 11:44:13 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"GfpMIDF9XSbCyr6kxyuwljRcHVPl0IU+7e6o4I4blic1YTjSvsLPCS7H3wlqPl2Zg39obCvRockzqwvu2vtkNA==", "user"=>{"username"=>"", "email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Create", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 6354)
+
+
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:44:45 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1630)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.5ms | Allocations: 6571)
+
+
+Started GET "/users/5/edit" for ::1 at 2020-05-06 11:46:06 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 0.6ms | Allocations: 6601)
+
+
+Started PATCH "/users/5" for ::1 at 2020-05-06 11:46:11 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"7Wl1NwUPtDk7ZzvVnWMJ4ulP7YXYUOskA6aeRWxmKbTB8gHFirAmFtdqWngwduTtXmyYuhZRz9Pd4z1LOIbbpw==", "user"=>{"username"=>"", "email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Create", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 6342)
+
+
+Started PATCH "/users/5" for ::1 at 2020-05-06 11:46:39 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"7Wl1NwUPtDk7ZzvVnWMJ4ulP7YXYUOskA6aeRWxmKbTB8gHFirAmFtdqWngwduTtXmyYuhZRz9Pd4z1LOIbbpw==", "user"=>{"username"=>"", "email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Create", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 6385)
+
+
+Started PATCH "/users/5" for ::1 at 2020-05-06 11:47:21 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"7Wl1NwUPtDk7ZzvVnWMJ4ulP7YXYUOskA6aeRWxmKbTB8gHFirAmFtdqWngwduTtXmyYuhZRz9Pd4z1LOIbbpw==", "user"=>{"username"=>"", "email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Create", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 33.3ms | ActiveRecord: 0.2ms | Allocations: 13648)
+
+
