@@ -19,18 +19,20 @@ Kubilay Caglayan
 - bundle install
 - rails db:migrate
 - rails server
-- address bar: localhost:3000/users/new
-- Create any user with password. Username shouldn't be empty.
-- To update User information go to localhost:3000/users/#{id of the user}/edit
-- 
+
 
 # Usage 
-- In order to enter the rails's console type rails console in your terminal.
-- `u = User.create(:name => "your_name")`
-- `p = Post.create(:title => "your_title", :body => "your_boby", :user_id => u.id)`
-- `c = Comment.create(:body => "your_body", :post_id => p.id, :user_id => u.id)`
+- address bar: localhost:3000 will take you to index page. From there you can see all users and create new user.
+- Create any user with password. Any of the fields shouldn't be empty.
+- create path: localhost:3000/users/new
+- update path: localhost:3000/users/#{id}/edit
 
-<img width="1307" alt="Screenshot 2020-05-04 at 10 49 22 AM" src="https://user-images.githubusercontent.com/50610396/80947602-2d9f2900-8df9-11ea-9856-f042c72a471f.png">
+# Index
+![Index Page](https://user-images.githubusercontent.com/60448833/81160957-768ae500-8f93-11ea-8c83-2ea52b31cf7b.png)
+# Edit
+![Edit Page](https://user-images.githubusercontent.com/60448833/81160958-77237b80-8f93-11ea-85c0-7ead9222f685.png)
+# Create New User
+![Create New User Page](https://user-images.githubusercontent.com/60448833/81160961-77237b80-8f93-11ea-814f-2c8c06f8303a.png)
 
 # Automated Test Section
 There are no automated test for this project yet
@@ -38,7 +40,7 @@ There are no automated test for this project yet
 # Feature & Issues Section
 This is an open source project. Feel free to add your feedback. If, for any reason, this project doesn't work as supposed to be in your computer, create an issue so we can help you out with it. Lastly, you can request for a feature to be added.
 
-[Issue Page](https://github.com/kubilaycaglayan/Building-With-Active-Record/issues)
+[Issue Page](https://github.com/mariosknl/Bare-Metal-Forms-and-Helpers/issues)
 
 # Built With
 
@@ -55,6 +57,8 @@ Give a star if you like this project!
 - https://guides.rubyonrails.org/active_record_validations.html
 - https://guides.rubyonrails.org/association_basics.html
 - https://guides.rubyonrails.org/v3.2/migrations.html
+- https://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html
+- https://guides.rubyonrails.org/form_helpers.html
 
 # License
 This project is MIT licensed
