@@ -1,11 +1,6 @@
-# BUILDING WITH ACTIVE RECORD
+# BARE METAL FORMS AND HELPERS
 
-In this project we are building with active record on Rails.
-Created with Model & Column & Association & Validation principals.
-
-# Notes
-- In our seed.rb file you will find dummy data.
-- data_plan.md File is our warm-up sketch.
+In this project we are building forms with pure HTML at first and then creating railsy versions of them.
 
 # Authors
 
@@ -13,7 +8,6 @@ Marios Kanellopoulos
 - Github: [@mariosknl](https://github.com/mariosknl)
 - Twitter: [@mariosknl](https://twitter.com/MariosKnl)
 - Linkedln: [marios-kanellopoulos](https://www.linkedin.com/in/marios-kanellopoulos)
-
 
 Kubilay Caglayan
 - Github: [@kubilaycaglayan](https://github.com/kubilaycaglayan)
@@ -24,8 +18,11 @@ Kubilay Caglayan
 - clone repository
 - bundle install
 - rails db:migrate
-- rails db:seed
-- rails console
+- rails server
+- address bar: localhost:3000/users/new
+- Create any user with password. Username shouldn't be empty.
+- To update User information go to localhost:3000/users/#{id of the user}/edit
+- 
 
 # Usage 
 - In order to enter the rails's console type rails console in your terminal.

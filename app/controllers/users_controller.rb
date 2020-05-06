@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.all
+  end
+
   def create
     # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
