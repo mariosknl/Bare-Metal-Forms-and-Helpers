@@ -1,0 +1,9 @@
+<h1>All <%= @users.all.count %> Users</h1>
+
+<ol>
+<% @users.all.each do |user| %>
+  <li><%= link_to user.username, edit_user_path(user.id) %></li>
+<% end %>
+</ol>
+
+<%= link_to 'Create New User', new_user_path %>
